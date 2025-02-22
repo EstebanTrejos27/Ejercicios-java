@@ -1,18 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+import java.util.Scanner;
 
-/**
- *
- * @author Est01
- */
-public class newJavaFile {
+public class PromedioCalificaciones {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+        // Inicializar variables
+        int numeroDeCalificaciones = 7;
+        double sumaCalificaciones = 0;
+        double calificacion;
+
+        // Leer las 7 calificaciones del alumno
+        for (int i = 1; i <= numeroDeCalificaciones; i++) {
+            System.out.print("Introduce la calificación " + i + " de la materia de Cálculo: ");
+            calificacion = scanner.nextDouble();
+            sumaCalificaciones += calificacion;
+        }
+
+        // Calcular el promedio
+        double promedio = sumaCalificaciones / numeroDeCalificaciones;
+
+        // Mostrar el resultado
+        System.out.println("El promedio de las calificaciones es: " + promedio);
+
+        // Cerrar el Scanner
+        scanner.close();
     }
 }

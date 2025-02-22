@@ -1,18 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+import java.util.Scanner;
 
-/**
- *
- * @author Est01
- */
 public class PromedioEdades {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+        // Inicializar variables
+        int numeroDeAlumnos = 100;
+        int sumaEdades = 0;
+        int edad;
+
+        // Leer las edades de los 100 alumnos
+        for (int i = 1; i <= numeroDeAlumnos; i++) {
+            System.out.print("Introduce la edad del alumno " + i + ": ");
+            edad = scanner.nextInt();
+            sumaEdades += edad;
+        }
+
+        // Calcular el promedio
+        double promedio = (double) sumaEdades / numeroDeAlumnos;
+
+        // Mostrar el resultado
+        System.out.println("El promedio de las edades es: " + promedio);
+
+        // Cerrar el Scanner
+        scanner.close();
     }
 }
